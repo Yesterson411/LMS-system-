@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Engineering Introduction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa;
+        }
+        .header-banner {
+            background-color: #00274d;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-banner h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .header-banner p {
+            font-size: 1.25rem;
+        }
+        .section-heading {
+            color: #00274d;
+            margin-bottom: 20px;
+        }
+        .container {
+            flex: 1;
+        }
+        .footer {
+            background-color: #00274d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="learn.html" class="nav-link px-2 text-white">Information</a></li>
+                    <li><a href="discover.html" class="nav-link px-2 text-white">Learn/Study</a></li>
+                    <li><a href="resouces.html" class="nav-link px-2 text-white">Article Resources</a></li>
+                    <li><a href="quiz.html" class="nav-link px-2 text-white">Take Quiz</a></li>
+                </ul>
+
+                <div id="auth-buttons" class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+
+                <div id="user-name" class="text-end text-white d-none">
+                    Welcome, <span id="display-name"></span>!
+                    <button id="logout-button" type="button" class="btn btn-danger ms-2">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <h1>Engineering Quiz</h1>
+        <p>Test your knowledge on engineering concepts with our interactive quiz.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-heading">Quiz</h2>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="quiz-question">
+                <p>1. What is the primary focus of mechanical engineering?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a" value="a" required>
+                    <label class="form-check-label" for="q1a">
+                        Designing and developing software applications.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                    <label class="form-check-label" for="q1b">
+                        The design and development of heavy machinery.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                    <label class="form-check-label" for="q1c">
+                        Building and maintaining computer hardware.
+                    </label>
+                </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="quiz-question">
+                <p>2. Which type of engineering involves the use of electricity to power digital systems?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a" value="a" required>
+                    <label class="form-check-label" for="q2a">
+                        Mechanical Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2b" value="b">
+                    <label class="form-check-label" for="q2b">
+                        Electrical Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2c" value="c">
+                    <label class="form-check-label" for="q2c">
+                        Civil Engineering
+                    </label>
+                </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="quiz-question">
+                <p>3. What does civil engineering primarily focus on?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3a" value="a" required>
+                    <label class="form-check-label" for="q3a">
+                        The creation and maintenance of infrastructure.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3b" value="b">
+                    <label class="form-check-label" for="q3b">
+                        The development of new software applications.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3c" value="c">
+                    <label class="form-check-label" for="q3c">
+                        Designing and building electronic circuits.
+                    </label>
+                </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="quiz-question">
+                <p>4. Which field of engineering is concerned with the creation of new medical devices?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4a" value="a" required>
+                    <label class="form-check-label" for="q4a">
+                        Biomedical Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4b" value="b">
+                    <label class="form-check-label" for="q4b">
+                        Chemical Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4c" value="c">
+                    <label class="form-check-label" for="q4c">
+                        Environmental Engineering
+                    </label>
+                </div>
+            </div>
+            <!-- Question 5 -->
+            <div class="quiz-question">
+                <p>5. What is the main focus of software engineering?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5a" value="a" required>
+                    <label class="form-check-label" for="q5a">
+                        The creation of new software applications.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5b" value="b">
+                    <label class="form-check-label" for="q5b">
+                        The design and development of infrastructure.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5c" value="c">
+                    <label class="form-check-label" for="q5c">
+                        The development of new electronic devices.
+                    </label>
+                </div>
+            </div>
+            <!-- Question 6 -->
+            <div class="quiz-question">
+                <p>6. Which field deals with designing and maintaining computer hardware?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6a" value="a" required>
+                    <label class="form-check-label" for="q6a">
+                        Computer Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6b" value="b">
+                    <label class="form-check-label" for="q6b">
+                        Mechanical Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6c" value="c">
+                    <label class="form-check-label" for="q6c">
+                        Civil Engineering
+                    </label>
+                </div>
+            </div>
+            <!-- Question 7 -->
+            <div class="quiz-question">
+                <p>7. Which type of engineering focuses on renewable energy sources?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7a" value="a" required>
+                    <label class="form-check-label" for="q7a">
+                        Environmental Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7b" value="b">
+                    <label class="form-check-label" for="q7b">
+                        Chemical Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7c" value="c">
+                    <label class="form-check-label" for="q7c">
+                        Biomedical Engineering
+                    </label>
+                </div>
+            </div>
+            <!-- Question 8 -->
+            <div class="quiz-question">
+                <p>8. What does chemical engineering mainly focus on?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8a" value="a" required>
+                    <label class="form-check-label" for="q8a">
+                        The development and manufacturing of chemicals and materials.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8b" value="b">
+                    <label class="form-check-label" for="q8b">
+                        The design and construction of large buildings.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8c" value="c">
+                    <label class="form-check-label" for="q8c">
+                        The design of electronic systems.
+                    </label>
+                </div>
+            </div>
+            <!-- Question 9 -->
+            <div class="quiz-question">
+                <p>9. Which engineering field focuses on the study of the environment and natural resources?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9a" value="a" required>
+                    <label class="form-check-label" for="q9a">
+                        Environmental Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9b" value="b">
+                    <label class="form-check-label" for="q9b">
+                        Mechanical Engineering
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9c" value="c">
+                    <label class="form-check-label" for="q9c">
+                        Civil Engineering
+                    </label>
+                </div>
+            </div>
+            <!-- Question 10 -->
+            <div class="quiz-question">
+                <p>10. What is the primary goal of aerospace engineering?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10a" value="a" required>
+                    <label class="form-check-label" for="q10a">
+                        Designing and developing aircraft and spacecraft.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10b" value="b">
+                    <label class="form-check-label" for="q10b">
+                        The construction of bridges and roads.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10c" value="c">
+                    <label class="form-check-label" for="q10c">
+                        Developing new software applications.
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+        </form>
+        <div id="quiz-result" class="mt-4"></div>
+
+        <h3 style="display: none;" id="memo"><a href="memo.html">View Memo</a></h3>
+
+        <br> <br>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Define correct answers
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'a',
+                q4: 'a',
+                q5: 'a',
+                q6: 'a',
+                q7: 'a',
+                q8: 'a',
+                q9: 'a',
+                q10: 'a'
+            };
+
+            // Get form data
+            const formData = new FormData(e.target);
+
+            // Calculate score
+            let score = 0;
+            formData.forEach((value, key) => {
+                if (correctAnswers[key] === value) {
+                    score++;
+                }
+            });
+
+            // Display result
+            const totalQuestions = Object.keys(correctAnswers).length;
+            const resultText = `You scored ${score} out of ${totalQuestions}.`;
+            document.getElementById('quiz-result').textContent = resultText;
+            document.getElementById('memo').style.display = 'block';
+        });
+
+        // Authentication Check
+        if (localStorage.getItem('isAuthenticated') !== 'true') {
+            alert('You must be logged in to view this page.');
+            window.location.href = 'login.html';
+        } else {
+            let userName = localStorage.getItem('user'); // Assume userName is stored on login
+            if (userName) {
+                userName = JSON.parse(userName);
+                document.getElementById('auth-buttons').style.display = 'none';
+                document.getElementById('user-name').classList.remove('d-none');
+                document.getElementById('display-name').textContent = userName.username;
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to My LMS. Explore courses, track progress, and achieve success with our learning management system.">
+    <meta name="keywords" content="LMS, Learning Management System, Online Courses, Education">
+    <title>My LMS Homepage</title>
+    <style>
+        /* Reset some default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap on small screens */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+        }
+
+        .nav-list li {
+            margin: 0 15px;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .nav-list a:hover {
+            color: #ff6347;
+        }
+
+        .nav-list .btn-login,
+        .nav-list .btn-register {
+            background-color: #ff6347;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .nav-list .btn-login:hover,
+        .nav-list .btn-register:hover {
+            background-color: #ff4500;
+        }
+
+        /* Hero section styling */
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #fff;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #ff6347;
+        }
+
+        /* About section styling */
+        .about-section {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-list li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <!-- Left Side of Nav -->
+            <ul class="nav-left nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact.+27838805301</a></li>
+                <li><a href="mailto:example@youremail.com">Email.nyikorms@gmail.com</a></li>
+                <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+            </ul>
+            <!-- Right Side of Nav -->
+            <ul class="nav-right nav-list">
+                <li><a href="login.html" class="btn-login">Login</a></li>
+                <li><a href="register.html" class="btn-register">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="hero-section">
+        <h1>Welcome to My LMS</h1>
+        <p>Your path to learning begins here. Explore courses, track progress, and achieve success.</p>
+        <a href="#courses" class="button">View Courses</a>
+    </section>
+
+    <!-- About This Website Section -->
+    <section class="about-section">
+        <h2>About This Website</h2>
+        <p>It’s a software application or platform that helps manage, deliver, and track educational courses or training programs. LMSs are commonly used in educational institutions, corporate training environments, and other settings where learning and development are key. They typically offer features like:</p>
+        <ul>
+            <li>Course creation and management</li>
+            <li>User enrollment and tracking</li>
+            <li>Assessment and quizzes</li>
+            <li>Communication tools (e.g., forums, messaging)</li>
+            <li>Reporting and analytics</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My LMS | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

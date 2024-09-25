@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Engineering Introduction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa;
+        }
+        .header-banner {
+            background-color: #00274d;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-banner h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .header-banner p {
+            font-size: 1.25rem;
+        }
+        .section-heading {
+            color: #00274d;
+            margin-bottom: 20px;
+        }
+        .resource-item {
+            margin-bottom: 20px;
+        }
+        .resource-item h4 {
+            color: #00274d;
+        }
+        .container {
+            flex: 1;
+        }
+        .footer {
+            background-color: #00274d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="learn.html" class="nav-link px-2 text-white">Information</a></li>
+                    <li><a href="discover.html" class="nav-link px-2 text-white">Learn/Study</a></li>
+                    <li><a href="resouces.html" class="nav-link px-2 text-white">Article Resources</a></li>
+                    <li><a href="quiz.html" class="nav-link px-2 text-white">Take Quiz</a></li>
+                </ul>
+
+                <div id="auth-buttons" class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+
+                <div id="user-name" class="text-end text-white d-none">
+                    Welcome, <span id="display-name"></span>!
+                    <button id="logout-button" type="button" class="btn btn-danger ms-2">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <h1>Learn Engineering</h1>
+        <p>Engineers design the systems that power the world. They build and work with computers, electronics, machinery, infrastructure, aircraft, and much more. Learn engineering with online courses delivered through edX.</p>
+    </div>
+
+    <!-- Introduction to Engineering Hand Tools -->
+    <div class="container">
+        <h2 class="section-heading">Introduction to Engineering Hand Tools</h2>
+        <p>Engineering hand tools form the base for any engineering practice. They are the very fundamental ways of executing simple repairs or complicated constructions. Selection, use, and care of these tools are necessary to give service in an efficient and safe manner. As Johnson (2023) puts it, hand tools work well in engineering only if the user understands what a certain tool can do and its limitations. For that reason, the study of hand tools becomes a crucial part of engineering education.</p>
+        <p>This OER aims to deepen your understanding of engineering hand tools, focusing on three main areas: selecting the right tools for specific tasks, using these tools effectively, and maintaining them to extend their lifespan and reliability. Tool selection, therefore, is based not only on availability but also on material properties, ergonomics, and the specific engineering task at hand (Smith & Brown, 2022). For instance, the choice of wrenches or pliers can greatly influence the outcome of a job, reducing the chances of injury and raising work quality.</p>
+        <p>Using hand tools correctly ensures not only precision in engineering tasks but also personal safety and the tool's best condition. Misuse can lead to accidents, damage to equipment, and substandard work, underscoring the need for proper training and understanding by the user (Davis, 2021). Finally, routine care for tools, such as cleaning, sharpening, and storage, is crucial for their longevity and optimal performance.</p>
+        <p>This OER will equip you with a solid knowledge base of engineering hand tools, developing the skills needed for the proper selection, effective use, and care of these tools, ensuring both safety and quality in your engineering practice.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-heading">What is Engineering?</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <p>Engineering uses science, math, and technology to solve challenges and fuel technological innovation. From civil engineers who create optimal layouts for cities to software engineers who develop our favorite apps, these tech professionals power much of the world around us. Every time you use an electronic device, drive across a bridge, or fly in an airplane, you’re experiencing the ingenuity of engineers at work.</p>
+
+                <p>There are multiple types of engineering, including:</p>
+                <ul>
+                    <li><strong>Mechanical engineering:</strong> The design and development of heavy machinery and its components.</li>
+                    <li><strong>Electrical engineering:</strong> The use of electricity to power computerized devices and digital systems.</li>
+                    <li><strong>Civil engineering:</strong> The creation and maintenance of infrastructure like roads, tunnels, public transit systems, and more.</li>
+                    <li><strong>Software engineering:</strong> The application of engineering principles to create computer or web applications.</li>
+                    <li><strong>Computer engineering:</strong> The building and maintenance of computer hardware and connected systems.</li>
+                </ul>
+
+                <p>Engineering is a diverse field with many sub-disciplines that allow engineers to specialize in specific areas of interest. Whether it's designing aircraft, developing new medical devices, or building software applications, engineers are integral to the progress and innovation in our modern world.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" width="550" height="450" src="video.mp4" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Authentication Check
+        if (localStorage.getItem('isAuthenticated') !== 'true') {
+            alert('You must be logged in to view this page.');
+            window.location.href = 'login.html';
+        } else {
+            let userName = localStorage.getItem('user'); // Assume userName is stored on login
+            if (userName) {
+                userName = JSON.parse(userName);
+                document.getElementById('auth-buttons').style.display = 'none';
+                document.getElementById('user-name').classList.remove('d-none');
+                document.getElementById('display-name').textContent = userName.username;
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

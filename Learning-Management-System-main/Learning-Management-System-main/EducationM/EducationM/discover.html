@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Technology: Embracing Mobile Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa;
+        }
+        .header-banner {
+            background-color: #00274d;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-banner h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .header-banner p {
+            font-size: 1.25rem;
+        }
+        .section-heading {
+            color: #00274d;
+            margin-bottom: 20px;
+        }
+        .container {
+            flex: 1;
+        }
+        .footer {
+            background-color: #00274d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="learn.html" class="nav-link px-2 text-white">Information</a></li>
+                    <li><a href="discover.html" class="nav-link px-2 text-white">Learn/Study</a></li>
+                    <li><a href="resouces.html" class="nav-link px-2 text-white">Article Resources </a></li>
+                    <li><a href="quiz.html" class="nav-link px-2 text-white">Take Quiz</a></li>
+                </ul>
+
+                <div id="auth-buttons" class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+
+                <div id="user-name" class="text-end text-white d-none">
+                    Welcome, <span id="display-name"></span>!
+                    <button id="logout-button" type="button" class="btn btn-danger ms-2">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <h1>Engineering Technology: Embracing Mobile Learning and Applications</h1>
+        <p>This e-book explores the transformative potential of mobile devices and applications in Engineering Technology. Discover how advanced technologies can revolutionize educational practices and enhance learning experiences for both students and professionals.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-heading">1. Introduction</h2>
+        <p><strong>Purpose Statement:</strong> This e-book delves deep into the transformative potential of mobile devices and applications in the area of learning and training within Engineering Technology. It seeks to comprehensively evaluate and articulate how advanced technologies can transform educational practices and, in turn, affect learning experiences for both engineering students and professionals.</p>
+        <p><strong>Value of eBooks on Mobile Devices:</strong> Mobile eBooks provide unprecedented access and convenience to learners, thus revolutionizing the way learners can interact with content. This accessibility is vital for engineering students and professionals who often need to refer to them in real-time scenarios, whether in classrooms, laboratories, or the field.</p>
+
+        <h2 class="section-heading">2. Content</h2>
+
+        <h3>2.1 Introduction to Mobile Learning in Engineering Technology</h3>
+        <p>Mobile learning in Engineering Technology includes specialized apps intended for accessing educational content with the help of smartphones, tablets, and more. It supports a personalized and on-the-go learning environment encouraging interactive experiences that are unique to engineering students.</p>
+        <p><strong>Key Concepts in Mobile Learning:</strong></p>
+        <ul>
+            <li><strong>Ubiquitous Learning:</strong> Learning beyond the classroom—a key requirement for engineering students who need to access information on-site or during fieldwork.</li>
+            <li><strong>Microlearning:</strong> Smaller learning modules that the student can easily digest and retain.</li>
+            <li><strong>Gamification:</strong> Using game elements to make learning more engaging, such as virtual labs or simulation games.</li>
+            <li><strong>Social Learning:</strong> Using social networks and collaboration tools to enhance learning.</li>
+        </ul>
+
+        <h3>2.2 Benefits of Using Apps in Engineering Education</h3>
+        <ul>
+            <li><strong>Interactivity:</strong> 3D models, simulations, and virtual labs with interactive features that animate difficult concepts.</li>
+            <li><strong>Accessibility:</strong> Engineering apps can be accessed from anywhere, providing flexibility for students to study on-site, in the lab, or at home.</li>
+            <li><strong>Adaptiveness:</strong> Apps can shape content to respond to individual learning needs.</li>
+            <li><strong>Engagement:</strong> Multimedia elements like videos, animations, and interactive simulations keep engineering learners engaged.</li>
+            <li><strong>Collaboration:</strong> Features that let students work together using discussion forums, shared project spaces, and real-time collaboration tools.</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Engineering Technology. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Authentication Check
+        if (localStorage.getItem('isAuthenticated') !== 'true') {
+            alert('You must be logged in to view this page.');
+            window.location.href = 'login.html';
+        } else {
+            let userName = localStorage.getItem('user'); // Assume userName is stored on login
+            if (userName) {
+                userName = JSON.parse(userName);
+                document.getElementById('auth-buttons').style.display = 'none';
+                document.getElementById('user-name').classList.remove('d-none');
+                document.getElementById('display-name').textContent = userName.username;
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

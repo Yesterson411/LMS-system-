@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Engineering Resources</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa;
+        }
+        .header-banner {
+            background-color: #00274d;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-banner h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .header-banner p {
+            font-size: 1.25rem;
+        }
+        .section-heading {
+            color: #00274d;
+            margin-bottom: 20px;
+        }
+        .resource-item {
+            margin-bottom: 20px;
+        }
+        .resource-item h4 {
+            color: #00274d;
+        }
+        .container {
+            flex: 1;
+        }
+        .footer {
+            background-color: #00274d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="learn.html" class="nav-link px-2 text-white">Information</a></li>
+                    <li><a href="discover.html" class="nav-link px-2 text-white">Learn/Study</a></li>
+                    <li><a href="resouces.html" class="nav-link px-2 text-white">Resources</a></li>
+                    <li><a href="quiz.html" class="nav-link px-2 text-white">Take Quiz</a></li>
+                </ul>
+
+                <div id="auth-buttons" class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+
+                <div id="user-name" class="text-end text-white d-none">
+                    Welcome, <span id="display-name"></span>!
+                    <button id="logout-button" type="button" class="btn btn-danger ms-2">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <h1>Engineering Resources</h1>
+        <p>Discover a curated list of resources to help you on your engineering journey.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-heading">Available Resources</h2>
+        <div class="row">
+            <div class="col-md-6 resource-item">
+                <h4>1. Hot Trends in Engineering for 2023</h4>
+                <p>Written by Jim Anderson, this article explores the latest trends in engineering for 2023.</p>
+                <a href="https://www.engineering.com/hot-trends-in-engineering-for-2023/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">Read Article</a>
+            </div>
+            <div class="col-md-6 resource-item">
+                <h4>2. Power Tools in Engineering Design</h4>
+                <p>Written by Engineering Product Design, this resource discusses the role of power tools in engineering design. Published on June 18, 2024.</p>
+                <a href="https://engineeringproductdesign.com/power-tools-in-engineering-design/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">Read Article</a>
+            </div>
+            <div class="col-md-6 resource-item">
+                <h4>3. Introduction of New Technologies in the Engineering Technology Curriculum</h4>
+                <p>Robert Koeneke from Embry-Riddle Aeronautical University provides insights into new technologies in engineering education.</p>
+                <a href="https://www.researchgate.net/publication/344537668_Introduction_of_New_Technologies_in_the_Engineering_Technology_Curriculum/link/60183167299bf1b33e403542/download?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">Download PDF</a>
+            </div>
+            <div class="col-md-6 resource-item">
+                <h4>4. Engineering Articles</h4>
+                <p>By Leah Shelene Asaram, this collection of articles covers various topics in engineering. Published on August 13th, 2024.</p>
+                <a href="https://www.eit.edu.au/category/article/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">Read Articles</a>
+            </div>
+            <div class="col-md-6 resource-item">
+                <h4>5. Education for an Age of Technology</h4>
+                <p>Wulf, W. A. explores educational strategies for the technological age in this op-ed from the National Academy of Engineering. Published in 1998.</p>
+                <a href="https://www.tandfonline.com/doi/full/10.1080/07373937.2023.2229650" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">Read Op-Ed</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Authentication Check
+        if (localStorage.getItem('isAuthenticated') !== 'true') {
+            alert('You must be logged in to view this page.');
+            window.location.href = 'login.html';
+        } else {
+            let userName = localStorage.getItem('user'); // Assume userName is stored on login
+            if (userName) {
+                userName = JSON.parse(userName);
+                document.getElementById('auth-buttons').style.display = 'none';
+                document.getElementById('user-name').classList.remove('d-none');
+                document.getElementById('display-name').textContent = userName.username;
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
